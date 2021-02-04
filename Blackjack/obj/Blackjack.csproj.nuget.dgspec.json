@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Svetoslav.Yordanov\\source\\repos\\Blackjack\\Blackjack\\Blackjack.csproj": {}
+    "C:\\Blackjack\\Blackjack\\Blackjack.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Svetoslav.Yordanov\\source\\repos\\Blackjack\\Blackjack\\Blackjack.csproj": {
+    "C:\\Blackjack\\Blackjack\\Blackjack.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Svetoslav.Yordanov\\source\\repos\\Blackjack\\Blackjack\\Blackjack.csproj",
+        "projectUniqueName": "C:\\Blackjack\\Blackjack\\Blackjack.csproj",
         "projectName": "Blackjack",
-        "projectPath": "C:\\Users\\Svetoslav.Yordanov\\source\\repos\\Blackjack\\Blackjack\\Blackjack.csproj",
+        "projectPath": "C:\\Blackjack\\Blackjack\\Blackjack.csproj",
         "packagesPath": "C:\\Users\\Svetoslav.Yordanov\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Svetoslav.Yordanov\\source\\repos\\Blackjack\\Blackjack\\obj\\",
+        "outputPath": "C:\\Blackjack\\Blackjack\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
