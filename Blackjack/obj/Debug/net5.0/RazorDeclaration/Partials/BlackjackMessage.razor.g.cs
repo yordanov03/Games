@@ -82,6 +82,13 @@ using Blackjack.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 1 "C:\Blackjack\Blackjack\Partials\BlackjackMessage.razor"
+using Models.Enums;
+
+#line default
+#line hidden
+#nullable disable
     public partial class BlackjackMessage : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -89,6 +96,18 @@ using Blackjack.Shared;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 3 "C:\Blackjack\Blackjack\Partials\BlackjackMessage.razor"
+      
+    [Parameter]
+    public GameState State { get; set; }
+
+    [Parameter]
+    public decimal Bet { get; set; }
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591

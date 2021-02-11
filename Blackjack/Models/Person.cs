@@ -34,6 +34,12 @@ namespace Blackjack.Models
 
         public bool IsBusted => Score > 21;
 
+        public async Task AddCard(Card card)
+        {
+            Cards.Add(card);
+            await Task.Delay(300);
+        }
+
 
         private int ScoreCalculation(bool onlyVisible = false)
         {

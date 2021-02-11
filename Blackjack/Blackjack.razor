@@ -1,0 +1,14 @@
+﻿@page "/blackjack"
+
+@using Models
+@using Models.Enums
+@using Pages.Partials
+
+
+@code {
+    Dealer dealer = new Dealer(); 
+
+    Player player = new Player();
+
+    GameState state = GameState.NotStarted;
+}

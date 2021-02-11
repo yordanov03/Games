@@ -68,20 +68,6 @@ using Microsoft.JSInterop;
 #line default
 #line hidden
 #nullable disable
-#nullable restore
-#line 9 "C:\Blackjack\Blackjack\_Imports.razor"
-using Blackjack;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 10 "C:\Blackjack\Blackjack\_Imports.razor"
-using Blackjack.Shared;
-
-#line default
-#line hidden
-#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/counter")]
     public partial class Counter : Microsoft.AspNetCore.Components.ComponentBase
     {

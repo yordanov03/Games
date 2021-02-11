@@ -82,6 +82,13 @@ using Blackjack.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 1 "C:\Blackjack\Blackjack\Partials\BlackjackHandResult.razor"
+using Models;
+
+#line default
+#line hidden
+#nullable disable
     public partial class BlackjackHandResult : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -89,6 +96,18 @@ using Blackjack.Shared;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 3 "C:\Blackjack\Blackjack\Partials\BlackjackHandResult.razor"
+       
+    [Parameter]
+    public Person Player { get; set; }
+
+    [Parameter]
+    public Person Dealer { get; set; }
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591

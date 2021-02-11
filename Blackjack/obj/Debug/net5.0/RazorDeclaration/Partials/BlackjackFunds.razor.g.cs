@@ -89,6 +89,18 @@ using Blackjack.Shared;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 1 "C:\Blackjack\Blackjack\Partials\BlackjackFunds.razor"
+       
+    [Parameter]
+    public decimal Funds { get; set; }
+
+    [Parameter]
+    public decimal Change { get; set; }
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591

@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace Blackjack.Pages
+namespace Blackjack
 {
     #line hidden
     using System;
@@ -68,14 +68,47 @@ using Microsoft.JSInterop;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/")]
-    public partial class Index : Microsoft.AspNetCore.Components.ComponentBase
+#nullable restore
+#line 3 "C:\Blackjack\Blackjack\Blackjack.razor"
+using Models;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "C:\Blackjack\Blackjack\Blackjack.razor"
+using Models.Enums;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 5 "C:\Blackjack\Blackjack\Blackjack.razor"
+using Pages.Partials;
+
+#line default
+#line hidden
+#nullable disable
+    [Microsoft.AspNetCore.Components.RouteAttribute("/blackjack")]
+    public partial class Blackjack : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 8 "C:\Blackjack\Blackjack\Blackjack.razor"
+       
+    Dealer dealer = new Dealer(); 
+
+    Player player = new Player();
+
+    GameState state = GameState.NotStarted;
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591
