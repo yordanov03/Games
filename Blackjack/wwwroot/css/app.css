@@ -30,6 +30,16 @@ a, .btn-link {
     color: red;
 }
 
+.blackjack-card {
+    height: 190px;
+    width: 140px;
+    float: left;
+}
+
+    .blackjack-card:not(:first-child) {
+        margin-left: -100px;
+    }
+
 #blazor-error-ui {
     background: lightyellow;
     bottom: 0;

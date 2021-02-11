@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace Blackjack.Pages
+namespace Blackjack.Partials
 {
     #line hidden
     using System;
@@ -82,8 +82,14 @@ using Blackjack.Shared;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/counter")]
-    public partial class Counter : Microsoft.AspNetCore.Components.ComponentBase
+#nullable restore
+#line 1 "C:\Blackjack\Blackjack\Partials\BlackjackHand.razor"
+using Models;
+
+#line default
+#line hidden
+#nullable disable
+    public partial class BlackjackHand : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -91,14 +97,10 @@ using Blackjack.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 9 "C:\Blackjack\Blackjack\Pages\Counter.razor"
-       
-    private int currentCount = 0;
-
-    private void IncrementCount()
-    {
-        currentCount++;
-    }
+#line 3 "C:\Blackjack\Blackjack\Partials\BlackjackHand.razor"
+      
+    [Parameter]
+    public List<Card>Cards { get; set; }
 
 #line default
 #line hidden
