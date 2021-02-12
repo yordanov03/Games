@@ -69,6 +69,27 @@ using Microsoft.JSInterop;
 #line hidden
 #nullable disable
 #nullable restore
+#line 9 "C:\Blackjack\Blackjack\_Imports.razor"
+using Shared;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 10 "C:\Blackjack\Blackjack\_Imports.razor"
+using Pages.Partials;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 11 "C:\Blackjack\Blackjack\_Imports.razor"
+using Models;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 1 "C:\Blackjack\Blackjack\Pages\Partials\BlackjackMessage.razor"
 using Models.Enums;
 

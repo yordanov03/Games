@@ -1,7 +1,9 @@
-﻿using Blackjack.Models.Enums;
+﻿using Blackjack.Models.Common;
+using Blackjack.Models.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 
 namespace Blackjack.Models
@@ -74,5 +76,6 @@ namespace Blackjack.Models
                 Cards.Push(array[i]);
             }
         }
+
     }
 }

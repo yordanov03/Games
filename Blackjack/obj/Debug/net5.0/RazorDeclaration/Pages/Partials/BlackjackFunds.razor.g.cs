@@ -68,6 +68,27 @@ using Microsoft.JSInterop;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 9 "C:\Blackjack\Blackjack\_Imports.razor"
+using Shared;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 10 "C:\Blackjack\Blackjack\_Imports.razor"
+using Pages.Partials;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 11 "C:\Blackjack\Blackjack\_Imports.razor"
+using Models;
+
+#line default
+#line hidden
+#nullable disable
     public partial class BlackjackFunds : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998

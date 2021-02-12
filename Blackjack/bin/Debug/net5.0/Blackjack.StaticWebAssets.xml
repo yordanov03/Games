@@ -1,4 +1,4 @@
 ﻿<StaticWebAssets Version="1.0">
-  <ContentRoot BasePath="/" Path="C:\Users\Svetoslav.Yordanov\source\repos\Blackjack\Blackjack\bin\Debug\net5.0\wwwroot\" />
-  <ContentRoot BasePath="/" Path="C:\Users\Svetoslav.Yordanov\source\repos\Blackjack\Blackjack\obj\Debug\net5.0\scopedcss\bundle\" />
+  <ContentRoot BasePath="/" Path="C:\Blackjack\Blackjack\bin\Debug\net5.0\wwwroot\" />
+  <ContentRoot BasePath="/" Path="C:\Blackjack\Blackjack\obj\Debug\net5.0\scopedcss\bundle\" />
 </StaticWebAssets>
