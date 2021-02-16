@@ -6,7 +6,7 @@
   "linkerEnabled": false,
   "resources": {
     "assembly": {
-      "Games.dll": "sha256-tK6NvyT8D2l+syBWzvxNGN+NS7pOvww4Tu8eZ6l9Z+8=",
+      "Games.dll": "sha256-kQrwqMc0mUrm1jGpoViasYV+7PVi0\/9CAz8i34nH0PM=",
       "Microsoft.Extensions.DependencyInjection.Abstractions.dll": "sha256-Bs1Wrmh4ex9dTEIT0yCRF52N\/wOmsBDt457BHr0\/ssM=",
       "netstandard.dll": "sha256-\/zcPVM75OAY+joGVM8yIC1gO1SFYWP1CFERgQ8PJkfA=",
       "System.Xml.Linq.dll": "sha256-IPbQMdJxZXdk8HTlaPyXdQ6Zb82iZLphnM74yO4EURQ=",
@@ -59,7 +59,7 @@
       "Microsoft.JSInterop.WebAssembly.dll": "sha256-czNf3btAeBW\/vvID5LAfgcsNZ+GM3ssVuPaMflcg0rs="
     },
     "pdb": {
-      "Games.pdb": "sha256-FchEp3dacoYq+1qzU8g5ueO3Z3GvMgNW\/EOD4VwU2sM="
+      "Games.pdb": "sha256-yJvilYpgZ4RVLNQL3kr9alKWe66VM9WbF3OuC3GCN\/U="
     },
     "runtime": {
       "dotnet.3.2.0.js": "sha256-mPoqx7XczFHBWk3gRNn0hc9ekG1OvkKY4XiKRY5Mj5U=",
