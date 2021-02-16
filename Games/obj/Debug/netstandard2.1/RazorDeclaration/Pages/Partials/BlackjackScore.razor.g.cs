@@ -13,77 +13,77 @@ namespace Games.Pages.Partials
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "C:\Blackjack\BlazorGames\_Imports.razor"
+#line 1 "C:\Games\Games\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Blackjack\BlazorGames\_Imports.razor"
+#line 2 "C:\Games\Games\_Imports.razor"
 using System.Net.Http.Json;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Blackjack\BlazorGames\_Imports.razor"
+#line 3 "C:\Games\Games\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Blackjack\BlazorGames\_Imports.razor"
+#line 4 "C:\Games\Games\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Blackjack\BlazorGames\_Imports.razor"
+#line 5 "C:\Games\Games\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "C:\Blackjack\BlazorGames\_Imports.razor"
+#line 6 "C:\Games\Games\_Imports.razor"
 using Microsoft.AspNetCore.Components.WebAssembly.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "C:\Blackjack\BlazorGames\_Imports.razor"
+#line 7 "C:\Games\Games\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "C:\Blackjack\BlazorGames\_Imports.razor"
+#line 8 "C:\Games\Games\_Imports.razor"
 using Games;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "C:\Blackjack\BlazorGames\_Imports.razor"
+#line 9 "C:\Games\Games\_Imports.razor"
 using Games.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 1 "C:\Blackjack\BlazorGames\Pages\Partials\BlackjackScore.razor"
+#line 1 "C:\Games\Games\Pages\Partials\BlackjackScore.razor"
 using Games.Models.Blackjack;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Blackjack\BlazorGames\Pages\Partials\BlackjackScore.razor"
+#line 2 "C:\Games\Games\Pages\Partials\BlackjackScore.razor"
 using Games.Models.Blackjack.Enums;
 
 #line default
@@ -97,7 +97,7 @@ using Games.Models.Blackjack.Enums;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 4 "C:\Blackjack\BlazorGames\Pages\Partials\BlackjackScore.razor"
+#line 4 "C:\Games\Games\Pages\Partials\BlackjackScore.razor"
        
     [Parameter]
     public GameState State { get; set; }

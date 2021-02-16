@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Blackjack\\BlazorGames\\Games.csproj": {}
+    "C:\\Games\\Games\\Games.csproj": {}
   },
   "projects": {
-    "C:\\Blackjack\\BlazorGames\\Games.csproj": {
+    "C:\\Games\\Games\\Games.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Blackjack\\BlazorGames\\Games.csproj",
+        "projectUniqueName": "C:\\Games\\Games\\Games.csproj",
         "projectName": "Games",
-        "projectPath": "C:\\Blackjack\\BlazorGames\\Games.csproj",
+        "projectPath": "C:\\Games\\Games\\Games.csproj",
         "packagesPath": "C:\\Users\\Svetoslav.Yordanov\\.nuget\\packages\\",
-        "outputPath": "C:\\Blackjack\\BlazorGames\\obj\\",
+        "outputPath": "C:\\Games\\Games\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
