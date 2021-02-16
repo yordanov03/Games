@@ -113,6 +113,181 @@ using Pages.Partials;
 
     GameState state = GameState.NotStarted;
 
+
+    public async Task Bet(decimal amount)
+    {
+        if (player.Funds >= amount)
+        {
+            player.Bet += amount;
+            await Deal();
+        }
+    }
+
+    public async Task Delay (int milisec)
+    {
+        await Task.Delay(milisec);
+        StateHasChanged();
+    }
+
+    public async Task InitializeHand()
+    {
+        if (dealer.Deck.Count < 13)
+        {
+            state = GameState.Shuffling;
+            dealer.Deck = new CardDeck();
+            await Delay(1000);
+        }
+    }
+
+    public async Task Deal()
+    {
+        state = GameState.Dealing;
+
+        //Deal cards. Cards not visible
+
+        await dealer.DealToPlayer(player);
+        StateHasChanged();
+
+        var dealerCard = dealer.Deal();
+        dealerCard.IsVisible = false;
+        await dealer.AddCard(dealerCard);
+        StateHasChanged();
+
+        //Deal another card to dealer and player
+        await dealer.DealToPlayer(player);
+        StateHasChanged();
+
+        await dealer.DealToSelf();
+        StateHasChanged();
+
+        state = GameState.InProgress;
+
+        if (player.HasNaturalBlackjack)
+        {
+            EndHand();
+        }
+    }
+
+    public async Task DealerTurn()
+    {
+        if (dealer.Score < 17)
+        {
+            await dealer.DealToSelf();
+            StateHasChanged();
+            await DealerTurn();
+        }
+    }
+
+    public async Task Hit()
+    {
+        await dealer.DealToPlayer(player);
+
+        if (player.IsBusted)
+        {
+            EndHand();
+        }
+    }
+
+    public async Task Stand()
+    {
+        player.HasStood = true;
+        dealer.Reveal();
+
+        await DealerTurn();
+
+        EndHand();
+    }
+
+    public async Task DoubleDown()
+    {
+        player.HasStood = true;
+        //Only if shown score is 9,10, 11
+        //If yes, the player doubles the bet
+        player.Bet *= 2;
+
+        await Delay(3000);
+
+        //Player gets additional card
+        await player.AddCard(dealer.Deal());
+
+        //Forced to stand
+        await Stand();
+    }
+
+    public void Insurance()
+    {
+        state = GameState.Insurance;
+
+        if (dealer.HasAceShowing)
+        {
+            //Insuranec bet is half the original bet
+            player.InsuranceBet = player.Bet / 2;
+
+            if(dealer.Score == 21)
+            {
+                dealer.Reveal();
+
+                player.Change += player.InsuranceBet * 2;
+
+                state = GameState.Payout;
+                StateHasChanged();
+                EndHand();
+            }
+
+            else
+            {
+                player.Change -= player.InsuranceBet;
+            }
+        }
+
+        state = GameState.InProgress;
+    }
+
+    public void EndHand()
+    {
+        state = GameState.Payout;
+
+        if(player.HasNaturalBlackjack && dealer.Score != 21)
+        {
+            player.Change += player.Bet * 1.5M;
+        }
+
+        else if(!player.IsBusted && dealer.IsBusted)
+        {
+            player.Change += player.Bet;
+        }
+
+        else if (!dealer.IsBusted && !player.IsBusted && player.Score > dealer.Score)
+        {
+            player.Change += player.Bet;
+        }
+
+        else if (!dealer.IsBusted && !player.IsBusted && player.Score == dealer.Score)
+        {
+            //just  push
+        }
+
+        else
+        {
+            player.Change += player.Bet * -1;
+        }
+
+        player.Bet = 0;
+        player.HasStood = false;
+    }
+
+    public async Task NewHand()
+    {
+        player.Collect();
+
+        player.ClearHand();
+        dealer.ClearHand();
+
+        state = GameState.NotStarted;
+
+        await InitializeHand();
+    }
+
 #line default
 #line hidden
 #nullable disable

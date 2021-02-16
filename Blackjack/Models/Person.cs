@@ -83,5 +83,10 @@ namespace Blackjack.Models
             //If score is never returned, person has a bust
             return cards.Sum(x => x.Score);
         }
+
+        public void ClearHand()
+        {
+            Cards.Clear();
+        }
     }
 }

@@ -97,7 +97,7 @@ using Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 28 "C:\Blackjack\Blackjack\Shared\NavMenu.razor"
+#line 24 "C:\Blackjack\Blackjack\Shared\NavMenu.razor"
        
     private bool collapseNavMenu = true;
 

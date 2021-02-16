@@ -1270,3 +1270,5 @@ C:\Blackjack\Blackjack\obj\Debug\net5.0\Blackjack.csproj.CopyComplete
 C:\Blackjack\Blackjack\obj\Debug\net5.0\Blackjack.dll
 C:\Blackjack\Blackjack\obj\Debug\net5.0\ref\Blackjack.dll
 C:\Blackjack\Blackjack\obj\Debug\net5.0\Blackjack.pdb
+C:\Blackjack\Blackjack\obj\Debug\net5.0\RazorDeclaration\MainGame.razor.g.cs
+C:\Blackjack\Blackjack\obj\Debug\net5.0\Razor\MainGame.razor.g.cs
