@@ -22,7 +22,7 @@
         }
     }
 
-    public async Task Delay (int milisec)
+    public async Task Delay(int milisec)
     {
         await Task.Delay(milisec);
         StateHasChanged();
@@ -122,7 +122,7 @@
             //Insuranec bet is half the original bet
             player.InsuranceBet = player.Bet / 2;
 
-            if(dealer.Score == 21)
+            if (dealer.Score == 21)
             {
                 dealer.Reveal();
 
@@ -146,12 +146,12 @@
     {
         state = GameState.Payout;
 
-        if(player.HasNaturalBlackjack && dealer.Score != 21)
+        if (player.HasNaturalBlackjack && dealer.Score != 21)
         {
             player.Change += player.Bet * 1.5M;
         }
 
-        else if(!player.IsBusted && dealer.IsBusted)
+        else if (!player.IsBusted && dealer.IsBusted)
         {
             player.Change += player.Bet;
         }
@@ -191,121 +191,121 @@
 
 
 <div class="row">
-    <div class="col-3">
-        <div>
-            @{
-                int cardCount = dealer.Deck.Count + 1;
-            }
-            @while (cardCount > 0)
-            {
-                <div class="blackjack-drawdeck">
-                    <img src="images/blackjack/cardBack.png" />
-                </div>
-                cardCount -= 13;
-            }
+        <div class="col-3">
+            <div>
+                @{
+                    int cardCount = dealer.Deck.Count + 1;
+                }
+                @while (cardCount > 0)
+                {
+                    <div class="blackjack-drawdeck">
+                        <img src="images/cardBack.png" />
+                    </div>
+                    cardCount -= 13;
+                }
+            </div>
+        </div>
+        <div class="col-3">
+            <Blackjack.Pages.Partials.BlackjackHand Cards="dealer.Cards"/>
+        </div>
+        <div class="col-3">
+            <Blackjack.Pages.Partials.BlackjackScore State="state" Player="dealer" />
         </div>
     </div>
-    <div class="col-3">
-        <Blackjack.Pages.Partials.BlackjackHand Cards="dealer.Cards"/>
-    </div>
-    <div class="col-3">
-        <Blackjack.Pages.Partials.BlackjackScore State="state" Player="dealer" />
-    </div>
-</div>
 
 
 
-<div class="row">
-    <div class="col-3">
-        @if (state == GameState.Betting)
-        {
-            @if (player.Funds < 10)
+    <div class="row">
+        <div class="col-3">
+            @if (state == GameState.Betting)
             {
-                <span class="display-3 text-danger">Out of money</span>
+                @if (player.Funds < 10)
+                {
+                    <span class="display-3 text-danger">Out of money</span>
+                }
+                @if (player.Funds >= 10)
+                {
+                    <button class="btn btn-primary" @onclick="(()=> Bet(10))">Bet $10</button>
+                }
+                @if (player.Funds >= 20)
+                {
+                    <button class="btn btn-primary" @onclick="(()=> Bet(20))">Bet $20</button>
+                }
+                @if (player.Funds >= 50)
+                {
+                    <button class="btn btn-primary" @onclick="(()=> Bet(50))">Bet $50</button>
+                }
             }
-            @if (player.Funds >= 10)
+        </div>
+        <div class="col-3">
+            @if(state == GameState.Payout)
             {
-                <button class="btn btn-primary" @onclick="(()=> Bet(10))">Bet $10</button>
+                <Blackjack.Pages.Partials.BlackjackHandResult Player="player" Dealer="dealer"/>
             }
-            @if (player.Funds >= 20)
-            {
-                <button class="btn btn-primary" @onclick="(()=> Bet(20))">Bet $20</button>
-            }
-            @if (player.Funds >= 50)
-            {
-                <button class="btn btn-primary" @onclick="(()=> Bet(50))">Bet $50</button>
-            }
-        }
-    </div>
-    <div class="col-3">
-        @if(state == GameState.Payout)
-        {
-            <Blackjack.Pages.Partials.BlackjackHandResult Player="player" Dealer="dealer"/>
-        }
 
-        @if(state == GameState.Dealing || state == GameState.Shuffling || state == GameState.InProgress)
-        {
-            <Blackjack.Pages.Partials.BlackjackMessage State="state" Bet="player.Bet"/>
-        }
+            @if(state == GameState.Dealing || state == GameState.Shuffling || state == GameState.InProgress)
+            {
+                <Blackjack.Pages.Partials.BlackjackMessage State="state" Bet="player.Bet"/>
+            }
+        </div>
+
+        <div class="col-3">
+
+        </div>
     </div>
 
-    <div class="col-3">
-
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-3">
-        @if (state == GameState.NotStarted)
-        {
-            <button class="btn btn-secondary"
-                    @onclick="(() => InitializeHand())">
-                Start Game
-            </button>
-        }
-
-        @if (!player.IsBusted && state == GameState.InProgress && !player.HasStood)
-        {
-            <button class="btn btn-primary" @onclick="(() => Stand())">
-                Stand
-            </button>
-            <button class="btn btn-primary" @onclick="(() => Hit())">
-                Hit
-            </button>
-
-            @if (player.Score >= 9
-              && player.Score <= 11
-              && player.Cards.Count == 2
-              && player.Funds >= player.Bet * 2)
+    <div class="row">
+        <div class="col-3">
+            @if (state == GameState.NotStarted)
             {
-                <br />
-                <button class="btn btn-warning"
-                        @onclick="(() => DoubleDown())">
-                    Double Down
+                <button class="btn btn-secondary"
+                        @onclick="(() => InitializeHand())">
+                    Start Game
                 </button>
             }
 
-            @if (dealer.HasAceShowing && !player.HasInsurance)
+            @if (!player.IsBusted && state == GameState.InProgress && !player.HasStood)
             {
-                <br />
-                <button class="btn btn-warning"
-                        @onclick="(() => Insurance())">
-                    Insurance ($@(player.Bet / 2))
+                <button class="btn btn-primary" @onclick="(() => Stand())">
+                    Stand
+                </button>
+                <button class="btn btn-primary" @onclick="(() => Hit())">
+                    Hit
+                </button>
+
+                @if (player.Score >= 9
+                  && player.Score <= 11
+                  && player.Cards.Count == 2
+                  && player.Funds >= player.Bet * 2)
+                {
+                    <br />
+                    <button class="btn btn-warning"
+                            @onclick="(() => DoubleDown())">
+                        Double Down
+                    </button>
+                }
+
+                @if (dealer.HasAceShowing && !player.HasInsurance)
+                {
+                    <br />
+                    <button class="btn btn-warning"
+                            @onclick="(() => Insurance())">
+                        Insurance ($@(player.Bet / 2))
+                    </button>
+                }
+            }
+
+            @if (state == GameState.Payout)
+            {
+                <button class="btn btn-secondary" @onclick="(() => NewHand())">
+                    Keep Going!
                 </button>
             }
-        }
-
-        @if (state == GameState.Payout)
-        {
-            <button class="btn btn-secondary" @onclick="(() => NewHand())">
-                Keep Going!
-            </button>
-        }
+        </div>
+        <div class="col-3">
+            <Blackjack.Pages.Partials.BlackjackHand Cards="player.Cards" />
+        </div>
+        <div class="col-3">
+            <Blackjack.Pages.Partials.BlackjackScore State="state" Player="player" />
+        </div>
     </div>
-    <div class="col-3">
-        <Blackjack.Pages.Partials.BlackjackHand Cards="player.Cards" />
-    </div>
-    <div class="col-3">
-        <Blackjack.Pages.Partials.BlackjackScore State="state" Player="player" />
-    </div>
-</div>

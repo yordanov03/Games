@@ -13,6 +13,7 @@ namespace Blackjack.Models.Enums
         InProgress,
         Insurance,
         Payout,
-        Shuffling
+        Shuffling,
+        EscortedOut
     }
 }

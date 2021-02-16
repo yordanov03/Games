@@ -1258,7 +1258,6 @@ C:\Blackjack\Blackjack\obj\Debug\net5.0\build-gz\T1UtJtfp.gz
 C:\Blackjack\Blackjack\obj\Debug\net5.0\build-gz\Wn5hcU29.gz
 C:\Blackjack\Blackjack\obj\Debug\net5.0\build-gz\Rfe0NsPO.gz
 C:\Blackjack\Blackjack\obj\Debug\net5.0\build-gz\vJ4TA2j4.gz
-C:\Blackjack\Blackjack\obj\Debug\net5.0\build-gz\qXKJjavz.gz
 C:\Blackjack\Blackjack\obj\Debug\net5.0\staticwebassets\Blackjack.StaticWebAssets.Manifest.cache
 C:\Blackjack\Blackjack\obj\Debug\net5.0\staticwebassets\Blackjack.StaticWebAssets.xml
 C:\Blackjack\Blackjack\obj\Debug\net5.0\scopedcss\Shared\MainLayout.razor.rz.scp.css
@@ -1272,3 +1271,4 @@ C:\Blackjack\Blackjack\obj\Debug\net5.0\ref\Blackjack.dll
 C:\Blackjack\Blackjack\obj\Debug\net5.0\Blackjack.pdb
 C:\Blackjack\Blackjack\obj\Debug\net5.0\RazorDeclaration\MainGame.razor.g.cs
 C:\Blackjack\Blackjack\obj\Debug\net5.0\Razor\MainGame.razor.g.cs
+C:\Blackjack\Blackjack\obj\Debug\net5.0\build-gz\qXKJjavz.gz

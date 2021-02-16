@@ -10,7 +10,7 @@ namespace Blackjack.Models
 {
     public class CardDeck
     {
-        protected Stack<Card> Cards { get; set; }
+        protected Stack<Card> Cards { get; set; } = new Stack<Card>();
         public int Count
         {
             get

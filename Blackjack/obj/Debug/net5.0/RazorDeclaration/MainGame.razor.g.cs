@@ -123,7 +123,7 @@ using Pages.Partials;
         }
     }
 
-    public async Task Delay (int milisec)
+    public async Task Delay(int milisec)
     {
         await Task.Delay(milisec);
         StateHasChanged();
@@ -223,7 +223,7 @@ using Pages.Partials;
             //Insuranec bet is half the original bet
             player.InsuranceBet = player.Bet / 2;
 
-            if(dealer.Score == 21)
+            if (dealer.Score == 21)
             {
                 dealer.Reveal();
 
@@ -247,12 +247,12 @@ using Pages.Partials;
     {
         state = GameState.Payout;
 
-        if(player.HasNaturalBlackjack && dealer.Score != 21)
+        if (player.HasNaturalBlackjack && dealer.Score != 21)
         {
             player.Change += player.Bet * 1.5M;
         }
 
-        else if(!player.IsBusted && dealer.IsBusted)
+        else if (!player.IsBusted && dealer.IsBusted)
         {
             player.Change += player.Bet;
         }
